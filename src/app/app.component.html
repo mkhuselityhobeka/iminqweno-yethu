@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .head{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: royalblue; /* custom hearder color*/
+        text-align: center;
+      }
+      .navbar-custom{
+        color: #ffffff;
+      }
+
+      .navbar-custom .nav-item.active .nav-link,
+      .navbar-custom .nav-item:hover .nav-link {
+         color: #ffffff;
+         background-color: royalblue; /* add background-color to active links */
+      }
+      .navbar-custom .navbar-nav .nav-link {
+       color: gray; /*  active link color */
+      }
+
+      .navbar-custom .nav-item.active .nav-link,
+      .navbar-custom .nav-item:hover .nav-link{
+        color: #ffffff; /* hovered link color*/
+      }
+      .footer{
+      padding:   10px 10px 0px 10px;
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+      background:skyblue;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <header>
+    <div class="head" style="color: white; text-overflow: initial;"><br>
+          <b>Latest Covid-19 News - <a href = 'https://sacoronavirus.co.za/'style="color: white;" >sacoronavirus.co.za</a></b>
+    </div>
+  </header>
+   <body>
+     <br><br><br>
+    <nav class="navbar navbar-expand-md navbar-custom bg-grey" style="position: initial;"><br><br>
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="navbar navbar-default navbar-fixed-top" id="navbarCustom" >
+        <ul class="navbar-nav">
+          <li class=" navbar-custom nav-item active">
+             <a routerLink="/home" class="nav-link" routerLinkActive="active">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/about']" class="nav-link"  >About us</a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['/our-services']" class="nav-link" >Services</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/careers']" class="nav-link">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/contact-us']" class="nav-link">Contact us</a>
+          </li>
+
+        </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br><br>
+
+    <div >
+        <router-outlet></router-outlet>
+    </div>
+
+
+  </body>
+
+  <div class="footer">
+    Copyright © Iminqweno | Privacy Policy
+   </div>
+</html>

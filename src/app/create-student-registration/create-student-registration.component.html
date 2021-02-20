@@ -1,0 +1,80 @@
+<br><br>
+<div class ="row justify-content-center align-items-center">
+     <h2>REGISTER HERE</h2>
+</div>
+<br><br>
+<div class ="row justify-content-center align-items-center">
+            
+
+        <div [hidden]="submitted" style="width: 600px;" class="form-group">
+          <form  novalidate>
+        
+                  <div class="row" >
+                        <div class="col" >
+                             <input type="text" class="form-control" id="sname" 
+                                        name="sname" [(ngModel)]="studentRegistration.sname" placeholder="First Name" name="sname" #sname="ngModel" required>
+                                        <div *ngIf="sname.invalid && (sname.dirty || sname.touched)" class="alert alert-danger">
+                                                <div *ngIf="sname.errors.required">     
+                                                        Name is required
+                                                </div>
+                                        </div>        
+                        </div>
+                        
+                        <div class="col">
+                            <input  type="text" class="form-control " placeholder="Last name" id="slastName" 
+                                        name="slastName" [(ngModel)]="studentRegistration.slastName"  #slastName="ngModel" required> 
+                                  <div *ngIf="slastName.invalid && (slastName.dirty || slastName.touched)" class="alert alert-danger">
+                                        <div *ngIf="slastName.errors.required">
+                                                        Lastname cannot be empty
+                                         </div>
+                                </div>
+                        </div>
+                        <br><br>
+                    </div>
+                
+                 <br><br>
+                 <div class="row">
+                        <div class="col">
+                          <input type="email" class="form-control" placeholder="Email" id="username" 
+                                        name="username"[(ngModel)]="studentRegistration.username" #username="ngModel" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                                <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                                        <div *ngIf="username.errors.required">
+                                                Username cannot be empty
+                                        </div>
+                                        <div [hidden]="!username.errors?.pattern">
+                                                Please enter valid email
+                                        </div>
+
+                                </div>
+                  </div>
+                  <br><br>
+                         <div class="col">
+                             <input  type="text" class="form-control " placeholder="Password" id="password"  
+                                                name="password" [(ngModel)]="studentRegistration.password" name="password"
+                                                        #password="ngModel" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required maxlength="15" minlength="8">
+                                        
+                                        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                                <div *ngIf="password.errors.required">
+                                                        Password is required
+                                                </div>
+
+                                                <div *ngIf="password.errors.maxlength">
+                                                        Password cannot be longer that 15 characters
+                                                </div>
+                                                <div [hidden]="!password.errors?.pattern">
+                                                        Password must be atleast 8 characters long with one uppercase , one lowecase, special characters and number e.g Mkhululi@79
+                                                </div>
+                                        </div>
+                        </div>
+                        <br><br>
+                 </div>
+                <br>
+                <button type="submit" value="submit" class="btn btn-outline-success form-control" (click)="save()" > REGISTER</button>
+                <br><br>
+                <div class="row justify-content-center align-items-center">
+                        <p>Aleady registered?
+                                <a [routerLink]="['/login']" role="link">Login</a></p>
+                </div>
+      
+        </form>
+</div>

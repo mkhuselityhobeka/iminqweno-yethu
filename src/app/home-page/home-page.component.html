@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+
+      .v1 {
+
+      border-left: 1px solid gray;
+      height: 500px;
+      position: absolute;
+      margin: 0 10px;
+      height: 125px;
+
+    }
+
+    .p{
+      color: white;
+    }
+
+    .circle{
+       width: 300px;
+       height: 300px;
+       background-color: royalblue;
+       border-radius: 50%;
+       text-align: center;
+       margin: 0 auto;
+    }
+
+    .circle-label{
+
+       text-align: center;
+       margin: 0 auto;
+    }
+    </style>
+    </head>
+
+  <body>
+    <main role="main">
+  <br>
+     <div class="jumbotron" style="background-color: slategray; height: 600px;">
+            <div>
+                <img src="assets/img/logo.jpeg" style="float: right; width: 600px; height: 500px;">
+                <h2 style="text-align: center; color: whitesmoke; font-weight: 800;"><br><br><br>We offer proffetional services and professional contractors<br> to ensure your work is done seamlesly</h2>
+            </div>
+     </div><br>
+     <div>
+       <h3 style="color: gray; text-align: center;">Iminqnweno Yethu Services is a fairly new black owned company
+              <br>The aim is to provide professional and competent contractors
+              <br>We manage your works while you relax knwoing that you don't have to deal with the stress that comes with refurbishments</h3>
+     </div><br><br>
+      <div class="container">
+          <div class="card-columns">
+              <div class=" card text-center"  style="width: 22rem;">
+                    <div class="card-body">
+                      <img src="assets/img/logo.jpeg" style="width: 150px; height: 200px; border-radius: 50%;">
+                        <h2>Learn More</h2>
+                        <p>To learn More about Iminqweno Yethu Services.<br>Please clieck the button below</p>
+                        <p><a class="btn btn-primary" [routerLink]="['/about']" role="button">Learn More &raquo;</a></p>
+                    </div>
+              </div><br>
+              <div class="card text-center" style="width: 22rem;">
+                    <div class="card-body" >
+                      <img src="assets/img/construction.jpg" style="width: 180px; height: 200px; border-radius: 50%;">
+                      <h2>Services</h2>
+                      <p>To view a list of our services clieck the button below </p><br>
+                      <p><a class="btn btn-primary" [routerLink]="['/our-services']"  role="button">Services &raquo;</a></p>
+                    </div>
+            </div>
+
+              <div class="card text-center" style="width: 22rem;">
+                  <div class="card-body">
+                    <img src="assets/img/firstClient.jpeg" style="width: 150px; height: 200px; border-radius: 50%;">
+                        <h2>Gallery</h2>
+                        <p>See all the work we have done so far, also client comments</p><br>
+                      <p><a class="btn btn-primary" href="#" role="button">Gallery</a></p>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </main>
+    <br><br><br><br>
+    <div class="jumbotron">
+        <h1 style="text-align: center;">Iminqweno Yethu Services at glance</h1><br><br>
+      <div class="card-columns">
+            <div class="circle justify-center"><br><br><br><br><br>
+                <h1 style="font-weight: bolder; color: whitesmoke;">1</h1>
+            </div>
+            <div class="circle justify-center"><br><br><br><br><br>
+                 <h1 style="color: whitesmoke;">1</h1>
+             </div>
+              <div class="circle justify-center"><br><br><br><br><br>
+                  <h1 style="color: whitesmoke;">2020</h1>
+              </div>
+
+     </div> <br><br>
+     <div class ="card-columns">
+          <div class="circle-label">
+            <p>BBEE Level</p>
+          </div>
+          <div class="circle-label">
+            <p>Age of the company</p>
+          </div>
+
+          <div class="circle-label">
+             <p>Year registered</p>
+          </div>
+     </div>
+
+    </div>
+
+    <div style="background-color: royalblue; height: 300px;">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm" style="color: whitesmoke; font-weight: lighter;">
+                <h2>Physical Address</h2><br>
+                <p>88 Bowker Street<br>Whittlesea<br>5360</p>
+              </div>
+              <div class="col-sm" style="color: whitesmoke; font-weight: lighter;">
+                <h2>Find Us</h2>
+                <p>There are multiple ways to reach out to us.<br> We are available on the following social networks</p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>

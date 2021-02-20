@@ -1,0 +1,104 @@
+     
+        <main role="main">
+
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron text-center">
+                   <div class="container">
+                      <h1 class="display-3">Partner Registration</h1>
+                      <p>Please fill in the form below in order to with us</p>
+                     </div>
+                </div>
+        
+    <div class="form-group justify-content-center align-items-center">
+       
+           <div class="form-group col-sm-4">
+                    <label for="firstName">FirstName</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" [(ngModel)]="student.firstName" name="firstName">
+           </div>
+     
+            <div class="form-group col-sm-4">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" [(ngModel)]="student.lastName" name="lastName">
+            </div>
+          
+            <div class="form-group col-md-4">
+              <label for="pob">Place of birth</label>
+                <input type="text" class="form-control" id="pob" placeholder="Place of birth" [(ngModel)]="student.pob" name="pob">
+            </div>
+         
+            <div class="form-group col-md-4">  
+                 <label for="id_number">ID Number</label>
+                <input type="text" class="form-control" id="id_number" placeholder="ID number" [(ngModel)]="student.id_number" name="id_number">
+            </div>
+
+            <div class="form-group col-md-4">
+                     <label for="home_language">Home Language</label>
+                    <input type="text" class="form-control" id="home_language" placeholder="Home language" [(ngModel)]="student.home_language" name="home_language">
+            </div>
+
+            <div class="form-group col-md-4">  
+                    <label for="citizenship">Citizenship</label>
+                    <input type="text" class="form-control" id="citizenship" placeholder="Citizenship" [(ngModel)]="student.citizenship" name="citizenship">
+            </div>
+
+           
+              <div class="input-group col-md-4">
+                <div class="input-group-prepend" (click)="uploadReportcard()">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Supporting Documents</span>
+                </div>
+                <div class="custom-file">
+                       <label for="Report" class="custom-file-label"></label>   
+                       <input type="file" (change) ="fileChange($event)" id="report" class="custom-file-input"placeholder="Upload Current Report" [(ngModel)]="student.report" aria-describedby="inputGroupFileAddon01">
+                </div>          
+             </div>
+    </div>    
+  <div class="paragraph justify-content-center align-items-center">
+    <p> Enter Address :</p>
+  </div>
+  
+
+  <div class="form-row">
+         
+              <div class="form-group col-md-4">
+                    <label for="Street">Street Name</label>
+                    <input type="text" id="StreetName" class="form-control sm" placeholder="Street Name" [(ngModel)]="student.address.StreetName" name="StreetName"/>       
+              </div>
+
+        
+            <div class="form-group col-md-4">
+                  <label for="HouseNumber">House Number</label>
+                  <input type="text" id="HouseNumber" class="form-control" placeholder="House Number" [(ngModel)]="student.address.HouseNumber" name="student.HouseNumber"/>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="Town">Town</label>
+                <input type="text" id="Town" class="form-control" placeholder="Town" [(ngModel)]="student.address.Town" name="Town"/>
+           </div>
+
+           <div class="form-group col-md-4">
+              <label for="City">City</label>
+              <input type="text" id="city" class="form-control" placeholder="City" [(ngModel)]="student.address.City" name="City"/>
+          </div>
+    
+
+            <div class="form-group col-md-4">
+              <label for="grade">Province</label>
+                    <select id="grade" class="form-control" [(ngModel)]="student.grade" name="student.address.grade">
+                      <option selected>Select Province...</option>
+                      <option>Easten Cape</option>
+                      <option>Gauteng</option>
+                      <option>Western Cape</option>
+                      <option>Mpumalanga</option>
+                      <option>Kwazulu Natal</option>
+                    </select>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="ZipCode">Zip Code</label>
+                <input type="text" id="ZipCode" class="form-control" placeholder="Zip Code" [(ngModel)]="student.address.ZipCode" name="ZipCode"/>
+           </div>
+        
+  </div>
+    
+      <button type="submit" value="submit" class="btn btn-outline-success form-group col-md-4S justify-content-center align-items-center" style="text-align: center;" (click)="saveStudentApp();"> Submit Form</button>
+      </main>
