@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/FundaRegistration-Front-End",
-            "index": "src/app/home-page/home-page.component.html",
+            "index": "src/app/app.component.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
